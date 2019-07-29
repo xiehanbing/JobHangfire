@@ -1,0 +1,12 @@
+E:\selfCode\Jobs.Core\Jobs.Core.Common\bin\Debug\netcoreapp2.2\Jobs.Core.Common.deps.json
+E:\selfCode\Jobs.Core\Jobs.Core.Common\bin\Debug\netcoreapp2.2\Jobs.Core.Common.dll
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.csproj.CoreCompileInputs.cache
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.AssemblyInfoInputs.cache
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.AssemblyInfo.cs
+E:\selfCode\Jobs.Core\Jobs.Core.Common\bin\Debug\netcoreapp2.2\Jobs.Core.Common.pdb
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.dll
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.pdb
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.csprojAssemblyReference.cache
+E:\selfCode\Jobs.Core\Jobs.Core.Common\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.dll
+E:\selfCode\Jobs.Core\Jobs.Core.Common\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.xml
+E:\selfCode\Jobs.Core\Jobs.Core.Common\obj\Debug\netcoreapp2.2\Jobs.Core.Common.csproj.CopyComplete
