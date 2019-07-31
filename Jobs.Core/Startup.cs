@@ -56,7 +56,7 @@ namespace Jobs.Core
             //注入hangfire 服务
             services.AddHangfire(x =>
             {
-                x.UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection"));
+                x.UseSqlServerStorage(Configuration.GetConnectionString(ApiConfig.JobDbConnectionName));
                 x.UseRecurringJob(new JobProvider());
                 x.UseConsole();
                 x.UseFilter(new LogEverythingAttribute());
@@ -67,8 +67,8 @@ namespace Jobs.Core
             //GlobalJobFilters.Filters.Add(new LogEverythingAttribute());
             //GlobalConfiguration.Configuration.UseAutofacActivator(container);
             //add dbcontext
-            services.AddDbContextPool<JobsDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddDbContextPool<JobsDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString(ApiConfig.JobDbConnectionName)));
+            services.AddDbContextPool<GeneralDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString(ApiConfig.GeneralConnectionName)));
             services.AddAuthentication(o =>
             {
                 o.DefaultAuthenticateScheme = CookieJobsAuthInfo.AdminAuthCookieScheme;
@@ -81,10 +81,12 @@ namespace Jobs.Core
             });
             //泛型注入到di
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped(typeof(IGeneralRepository<>), typeof(GeneralEfRepository<>));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSession();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ITunnelRegisterService, TunnelRegisterService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

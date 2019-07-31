@@ -36,17 +36,12 @@ namespace Jobs.Core.Controllers
         /// <summary>
         /// 每两个小时执行一次 （每19分钟）
         /// </summary>
-        [RecurringJob("0 * */2 * * ?", queue: HangfireQueue.Default)]
+        [RecurringJob("0 0 0/2 * * ?", queue: HangfireQueue.Default)]
         [JobDisplayName("接收 每两个小时执行一次")]
         public void Receive(PerformContext context)
         {
             context.WriteLine("Receive：hello message");
             _messageService.Receive("hello message");
         }
-        //[RecurringJob("0 */2 * * * ?",queue:HangfireQueue.Apis)]
-        //public void Except(PerformContext context)
-        //{
-        //    context.WriteLine("Except213123");
-        //}
     }
 }
