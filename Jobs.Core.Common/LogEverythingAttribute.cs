@@ -17,14 +17,14 @@ namespace Jobs.Core.Common
         {
             Logger.InfoFormat("Creating a job based on method `{0}`...", filterContext.Job.Method.Name);
             WriteLog(
-                $"{ApiConfig.HangfireLogUrl}\\OnCreating-{(filterContext.Job.Method.Name)}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt",
+                $"{ApiConfig.HangfireLogUrl}\\OnCreating-{(filterContext.Job.Method.Name)}-{DateTime.Now:yyyy-MM-dd}.txt",
                 $"Creating a job based on method `{filterContext.Job.Method.Name}`... . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss}");
         }
 
         public void OnCreated(CreatedContext filterContext)
         {
             WriteLog(
-                $"{ApiConfig.HangfireLogUrl}\\OnCreated-{(filterContext.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt", 
+                $"{ApiConfig.HangfireLogUrl}\\OnCreated-{(filterContext.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd}.txt", 
                 $"Job that is based on method `{filterContext.Job.Method.Name}` has been created with id `{filterContext.BackgroundJob?.Id}` . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss} \r\n");
             Logger.InfoFormat(
                 "Job that is based on method `{0}` has been created with id `{1}`",
@@ -36,7 +36,7 @@ namespace Jobs.Core.Common
         {
             Logger.InfoFormat("Starting to perform job `{0}`", filterContext.BackgroundJob.Id);
             WriteLog(
-                $"{ApiConfig.HangfireLogUrl}\\OnPerforming-{(filterContext.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt",
+                $"{ApiConfig.HangfireLogUrl}\\OnPerforming-{(filterContext.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd}.txt",
                 $"Starting to perform job `{filterContext.BackgroundJob.Id}` . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss} \r\n");
         }
 
@@ -44,7 +44,7 @@ namespace Jobs.Core.Common
         {
             Logger.InfoFormat("Job `{0}` has been performed", filterContext.BackgroundJob.Id);
             WriteLog(
-                $"{ApiConfig.HangfireLogUrl}\\OnPerformed-{(filterContext.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt",
+                $"{ApiConfig.HangfireLogUrl}\\OnPerformed-{(filterContext.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd}.txt",
                 $"Job `{ filterContext.BackgroundJob.Id}` has been performed . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss} \r\n");
         }
 
@@ -58,7 +58,7 @@ namespace Jobs.Core.Common
                     context.BackgroundJob.Id,
                     failedState.Exception);
                 WriteLog(
-                    $"{ApiConfig.HangfireLogUrl}\\OnStateElection-{(context.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt",
+                    $"{ApiConfig.HangfireLogUrl}\\OnStateElection-{(context.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd}.txt",
                     $"Job `{context.BackgroundJob.Id}` has been failed due to an exception `{(JsonConvert.SerializeObject(failedState.Exception))}` . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss} \r\n");
             }
         }
@@ -71,7 +71,7 @@ namespace Jobs.Core.Common
                 context.OldStateName,
                 context.NewState.Name);
             WriteLog(
-                $"{ApiConfig.HangfireLogUrl}\\OnStateApplied-{(context.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt",
+                $"{ApiConfig.HangfireLogUrl}\\OnStateApplied-{(context.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd}.txt",
                 $"Job `{context.BackgroundJob.Id}` state was changed from `{context.OldStateName}` to `{context.NewState.Name}` . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss} \r\n");
         }
 
@@ -82,7 +82,7 @@ namespace Jobs.Core.Common
                 context.BackgroundJob.Id,
                 context.OldStateName);
             WriteLog(
-                $"{ApiConfig.HangfireLogUrl}\\OnStateUnapplied-{(context.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.txt",
+                $"{ApiConfig.HangfireLogUrl}\\OnStateUnapplied-{(context.BackgroundJob?.Id ?? "0")}-{DateTime.Now:yyyy-MM-dd}.txt",
                 $"Job `{context.BackgroundJob.Id}` state `{context.OldStateName}` was unapplied . 时间为:{DateTime.Now:yyyy-MM-dd-HH-mm-ss} \r\n");
         }
         /// <summary>

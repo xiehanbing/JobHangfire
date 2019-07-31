@@ -3092,11 +3092,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\selfCode\\Jobs.Core\\Jobs.Core.Common\\Jobs.Core.Common.csproj",
+      "projectUniqueName": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core.Common\\Jobs.Core.Common.csproj",
       "projectName": "Jobs.Core.Common",
-      "projectPath": "E:\\selfCode\\Jobs.Core\\Jobs.Core.Common\\Jobs.Core.Common.csproj",
+      "projectPath": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core.Common\\Jobs.Core.Common.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\selfCode\\Jobs.Core\\Jobs.Core.Common\\obj\\",
+      "outputPath": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

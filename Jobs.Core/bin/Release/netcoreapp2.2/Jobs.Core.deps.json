@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "63b7c1b1fb73216750fa166851d9f99bd4d06eb9"
+    "signature": "c1b948d526119eee4cdff5b5d0c734b0e4968249"
   },
   "compilationOptions": {
     "defines": [
@@ -26,11 +26,14 @@
         "dependencies": {
           "Hangfire.AspNetCore": "1.7.5",
           "Hangfire.Console": "1.4.2",
+          "Hangfire.Dashboard.RecurringJobExtensions": "1.0.1",
+          "Hangfire.Heartbeat": "0.5.0",
           "Hangfire.RecurringJobExtensions": "1.1.6",
           "Hangfire.SqlServer": "1.7.5",
           "Jobs.Core.Application": "1.0.0",
           "Jobs.Entity": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Hosting.WindowsServices": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
@@ -107,6 +110,34 @@
           "lib/netstandard2.0/Hangfire.Core.dll": {}
         }
       },
+      "Hangfire.Dashboard.RecurringJobExtensions/1.0.1": {
+        "dependencies": {
+          "Hangfire.Core": "1.7.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.Dashboard.RecurringJobExtensions.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.Dashboard.RecurringJobExtensions.dll": {}
+        }
+      },
+      "Hangfire.Heartbeat/0.5.0": {
+        "dependencies": {
+          "Hangfire.Core": "1.7.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.Heartbeat.dll": {
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.Heartbeat.dll": {}
+        }
+      },
       "Hangfire.RecurringJobExtensions/1.1.6": {
         "dependencies": {
           "Hangfire.Core": "1.7.5",
@@ -135,6 +166,21 @@
         },
         "compile": {
           "lib/netstandard2.0/Hangfire.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.WindowsServices/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "2.2.0",
+          "System.ServiceProcess.ServiceController": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.WindowsServices.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.WindowsServices.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -590,6 +636,32 @@
           "ref/netcoreapp2.1/System.Data.SqlClient.dll": {}
         }
       },
+      "System.Diagnostics.EventLog/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Security.Permissions": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0",
+          "System.Threading.AccessControl": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Diagnostics.EventLog.dll": {}
+        }
+      },
       "System.Interactive.Async/3.2.0": {
         "runtime": {
           "lib/netstandard2.0/System.Interactive.Async.dll": {
@@ -661,6 +733,28 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.ServiceProcess.ServiceController/4.5.0": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceProcess.ServiceController.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceProcess.ServiceController.dll": {}
+        }
+      },
       "System.Text.Encoding.CodePages/4.5.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -677,6 +771,26 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Threading.AccessControl/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.AccessControl.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Threading.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.6.26515.6"
           }
         }
@@ -3837,6 +3951,20 @@
       "path": "hangfire.core/1.7.5",
       "hashPath": "hangfire.core.1.7.5.nupkg.sha512"
     },
+    "Hangfire.Dashboard.RecurringJobExtensions/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tcpPR3li15KpDQC97c619N0OwgISZX59X535h3LegGspmc/x8iewR4oYO42lHRD0jviRc1jGxNNy2+fUrNN38w==",
+      "path": "hangfire.dashboard.recurringjobextensions/1.0.1",
+      "hashPath": "hangfire.dashboard.recurringjobextensions.1.0.1.nupkg.sha512"
+    },
+    "Hangfire.Heartbeat/0.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OR1C6mOiJRfC7IMDqPiEKRUZpMuQyQmovWSHzPznWbQO19cEmrYuThoLbxsOZzQUAgbc8X3GSd1NdTQjWC7flg==",
+      "path": "hangfire.heartbeat/0.5.0",
+      "hashPath": "hangfire.heartbeat.0.5.0.nupkg.sha512"
+    },
     "Hangfire.RecurringJobExtensions/1.1.6": {
       "type": "package",
       "serviceable": true,
@@ -3850,6 +3978,13 @@
       "sha512": "sha512-qOSQ/65YfyeMr9EeFhar/GyGtYjT0P3q0/Poe9/mmMyNj1XaN05sHE2NiOmqjuBQE6gUhFUB0CuOlNeedxJL2g==",
       "path": "hangfire.sqlserver/1.7.5",
       "hashPath": "hangfire.sqlserver.1.7.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Hosting.WindowsServices/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-614AnpWOeIx/cCRihy30H1QagwnvH9utCtUP2db2XGXMz2PHcbQf9Qp1S0KKF9wWJ+p7+LuVi+/99m9XJayqMg==",
+      "path": "microsoft.aspnetcore.hosting.windowsservices/2.2.0",
+      "hashPath": "microsoft.aspnetcore.hosting.windowsservices.2.2.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
@@ -4061,6 +4196,13 @@
       "path": "system.data.sqlclient/4.6.1",
       "hashPath": "system.data.sqlclient.4.6.1.nupkg.sha512"
     },
+    "System.Diagnostics.EventLog/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QaQAhEk18QSBPSu4VjXcznvjlg45IoXcJJNS5hcoqyyLj58g/SzQwpYXUrdzo+UtHV0grmOzFwABxhCYSTTp5Q==",
+      "path": "system.diagnostics.eventlog/4.5.0",
+      "hashPath": "system.diagnostics.eventlog.4.5.0.nupkg.sha512"
+    },
     "System.Interactive.Async/3.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4089,12 +4231,26 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
+    "System.ServiceProcess.ServiceController/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8DGUtcNHf9TlvSVemKMFiqcOWJ4OdGBgvpcGL/cYossGf5ApMQdPUQS8vXHTBmlbYAcG+JXsjMFGAHp2oJrr+Q==",
+      "path": "system.serviceprocess.servicecontroller/4.5.0",
+      "hashPath": "system.serviceprocess.servicecontroller.4.5.0.nupkg.sha512"
+    },
     "System.Text.Encoding.CodePages/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-S0wEUiKcLvRlkFUXca8uio1UQ5bYQzYgOmOKtCqaBQC3GR9AJjh43otcM32IGsAyvadFTaAMw9Irm6dS4Evfng==",
       "path": "system.text.encoding.codepages/4.5.0",
       "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
+    },
+    "System.Threading.AccessControl/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZU4JNV9eHPw3TAdIJCDH07u9EfGFGgNJnaga8aFjcdvIIZKq4A+ZqaQNvUMFIbdCMPceYzt8JT5MdYIXAOlJ9A==",
+      "path": "system.threading.accesscontrol/4.5.0",
+      "hashPath": "system.threading.accesscontrol.4.5.0.nupkg.sha512"
     },
     "System.Threading.Overlapped/4.0.1": {
       "type": "package",

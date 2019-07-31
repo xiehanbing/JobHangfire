@@ -12,3 +12,17 @@ E:\selfCode\Jobs.Core\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.
 E:\selfCode\Jobs.Core\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.pdb
 E:\selfCode\Jobs.Core\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Entity.dll
 E:\selfCode\Jobs.Core\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Entity.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Core.Application.deps.json
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Core.Application.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Core.Application.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Core.Common.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Entity.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Core.Common.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\bin\Release\netcoreapp2.2\Jobs.Entity.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.csprojAssemblyReference.cache
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.csproj.CoreCompileInputs.cache
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.AssemblyInfoInputs.cache
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.AssemblyInfo.cs
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.csproj.CopyComplete
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Core.Application\obj\Release\netcoreapp2.2\Jobs.Core.Application.pdb

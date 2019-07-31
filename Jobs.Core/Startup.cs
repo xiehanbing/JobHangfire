@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Hangfire;
 using Hangfire.Console;
 using Hangfire.Dashboard;
+using Hangfire.Dashboard.RecurringJobExtensions;
+using Hangfire.Heartbeat;
+using Hangfire.Heartbeat.Server;
 using Hangfire.RecurringJobExtensions;
 using Jobs.Core.Application;
 using Jobs.Core.Common;
@@ -57,19 +60,18 @@ namespace Jobs.Core
                 x.UseRecurringJob(new JobProvider());
                 x.UseConsole();
                 x.UseFilter(new LogEverythingAttribute());
+                x.UseHeartbeatPage(checkInterval: TimeSpan.FromSeconds(1));
+                x.UseDashboardRecurringJobExtensions();
             });
             ApiConfig.HangfireLogUrl = Configuration["HangfireLogFileUrl"];
             //GlobalJobFilters.Filters.Add(new LogEverythingAttribute());
             //GlobalConfiguration.Configuration.UseAutofacActivator(container);
             //add dbcontext
-            services.AddDbContextPool<JobsDbContext>(options =>
-
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContextPool<JobsDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAuthentication(o =>
             {
                 o.DefaultAuthenticateScheme = CookieJobsAuthInfo.AdminAuthCookieScheme;
-
                 o.DefaultChallengeScheme = CookieJobsAuthInfo.AdminAuthCookieScheme;
                 o.DefaultSignInScheme = CookieJobsAuthInfo.AdminAuthCookieScheme;
                 o.DefaultSignOutScheme = CookieJobsAuthInfo.AdminAuthCookieScheme;
@@ -119,9 +121,14 @@ namespace Jobs.Core
             {
                 Queues = new[] { "default", "apis", "job" },//队列名称，只能小写
                 WorkerCount = Environment.ProcessorCount * 5,//并发任务数
+                
                 ServerName = "hangfire"//服务器名称
             };
-            app.UseHangfireServer(jobOptions);
+            app.UseHangfireServer(jobOptions,additionalProcesses:new []
+            {
+                //Hangfire.Heartbeat
+                new ProcessMonitor(checkInterval:TimeSpan.FromSeconds(1))
+            });
 
             //配置访问权限
             var options = new DashboardOptions()
@@ -130,12 +137,6 @@ namespace Jobs.Core
                 
             };
             app.UseHangfireDashboard("/hangfire", options);//启动hangfire 面板
-            //HandfireExtension.Register();
-            //app.Run(ctx =>
-            //{
-            //    ctx.Response.Redirect($"{Configuration["WebRootUrl"]}/hangfire"); //可以支持虚拟路径或者index.html这类起始页.
-            //    return Task.FromResult(0);
-            //});
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Jobs.Core.Extension
     /// </summary>
     public class HandfireExtension
     {
-        public static void Register()
-        {
-            RecurringJob.AddOrUpdate<MessageController>(a => a.Send(), Cron.Minutely());
-            RecurringJob.AddOrUpdate<MessageController>(a => a.Receive(), Cron.Minutely());
-        }
+        //public static void Register()
+        //{
+        //    RecurringJob.AddOrUpdate<MessageController>(a => a.Send(), Cron.Minutely());
+        //    RecurringJob.AddOrUpdate<MessageController>(a => a.Receive(), Cron.Minutely());
+        //}
     }
 }

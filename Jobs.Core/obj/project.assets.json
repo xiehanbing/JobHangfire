@@ -61,6 +61,30 @@
           }
         }
       },
+      "Hangfire.Dashboard.RecurringJobExtensions/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Hangfire.Core": "1.6.21"
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.Dashboard.RecurringJobExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.Dashboard.RecurringJobExtensions.dll": {}
+        }
+      },
+      "Hangfire.Heartbeat/0.5.0": {
+        "type": "package",
+        "dependencies": {
+          "HangFire.Core": "1.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.Heartbeat.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.Heartbeat.dll": {}
+        }
+      },
       "Hangfire.RecurringJobExtensions/1.1.6": {
         "type": "package",
         "dependencies": {
@@ -722,6 +746,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.WindowsServices/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "2.2.0",
+          "System.ServiceProcess.ServiceController": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.WindowsServices.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.WindowsServices.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3507,6 +3544,28 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
+      "System.Diagnostics.EventLog/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Security.Permissions": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0",
+          "System.Threading.AccessControl": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Diagnostics.EventLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.EventLog.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.FileVersionInfo/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4567,6 +4626,24 @@
           }
         }
       },
+      "System.ServiceProcess.ServiceController/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceProcess.ServiceController.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceProcess.ServiceController.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4641,6 +4718,25 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.dll": {}
+        }
+      },
+      "System.Threading.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Threading.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Threading.Channels/4.5.0": {
@@ -5005,6 +5101,33 @@
         "lib/netstandard2.0/pt-BR/Hangfire.Core.resources.dll",
         "lib/netstandard2.0/zh-TW/Hangfire.Core.resources.dll",
         "lib/netstandard2.0/zh/Hangfire.Core.resources.dll"
+      ]
+    },
+    "Hangfire.Dashboard.RecurringJobExtensions/1.0.1": {
+      "sha512": "tcpPR3li15KpDQC97c619N0OwgISZX59X535h3LegGspmc/x8iewR4oYO42lHRD0jviRc1jGxNNy2+fUrNN38w==",
+      "type": "package",
+      "path": "hangfire.dashboard.recurringjobextensions/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hangfire.dashboard.recurringjobextensions.1.0.1.nupkg.sha512",
+        "hangfire.dashboard.recurringjobextensions.nuspec",
+        "lib/netstandard2.0/Hangfire.Dashboard.RecurringJobExtensions.dll"
+      ]
+    },
+    "Hangfire.Heartbeat/0.5.0": {
+      "sha512": "OR1C6mOiJRfC7IMDqPiEKRUZpMuQyQmovWSHzPznWbQO19cEmrYuThoLbxsOZzQUAgbc8X3GSd1NdTQjWC7flg==",
+      "type": "package",
+      "path": "hangfire.heartbeat/0.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hangfire.heartbeat.0.5.0.nupkg.sha512",
+        "hangfire.heartbeat.nuspec",
+        "lib/net462/Hangfire.Heartbeat.dll",
+        "lib/net462/Hangfire.Heartbeat.xml",
+        "lib/netstandard2.0/Hangfire.Heartbeat.dll",
+        "lib/netstandard2.0/Hangfire.Heartbeat.xml"
       ]
     },
     "Hangfire.RecurringJobExtensions/1.1.6": {
@@ -5494,6 +5617,21 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.xml",
         "microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.hosting.server.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Hosting.WindowsServices/2.2.0": {
+      "sha512": "614AnpWOeIx/cCRihy30H1QagwnvH9utCtUP2db2XGXMz2PHcbQf9Qp1S0KKF9wWJ+p7+LuVi+/99m9XJayqMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.hosting.windowsservices/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.AspNetCore.Hosting.WindowsServices.dll",
+        "lib/net461/Microsoft.AspNetCore.Hosting.WindowsServices.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.WindowsServices.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.WindowsServices.xml",
+        "microsoft.aspnetcore.hosting.windowsservices.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.hosting.windowsservices.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -9500,6 +9638,26 @@
         "version.txt"
       ]
     },
+    "System.Diagnostics.EventLog/4.5.0": {
+      "sha512": "QaQAhEk18QSBPSu4VjXcznvjlg45IoXcJJNS5hcoqyyLj58g/SzQwpYXUrdzo+UtHV0grmOzFwABxhCYSTTp5Q==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "ref/net461/System.Diagnostics.EventLog.dll",
+        "ref/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll",
+        "system.diagnostics.eventlog.4.5.0.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Diagnostics.FileVersionInfo/4.3.0": {
       "sha512": "omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
       "type": "package",
@@ -12411,6 +12569,42 @@
         "version.txt"
       ]
     },
+    "System.ServiceProcess.ServiceController/4.5.0": {
+      "sha512": "8DGUtcNHf9TlvSVemKMFiqcOWJ4OdGBgvpcGL/cYossGf5ApMQdPUQS8vXHTBmlbYAcG+JXsjMFGAHp2oJrr+Q==",
+      "type": "package",
+      "path": "system.serviceprocess.servicecontroller/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.ServiceProcess.ServiceController.dll",
+        "lib/netstandard1.4/System.ServiceProcess.ServiceController.dll",
+        "lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "ref/net461/System.ServiceProcess.ServiceController.dll",
+        "ref/net461/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/System.ServiceProcess.ServiceController.dll",
+        "ref/netstandard1.4/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/de/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/es/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/fr/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/it/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/ja/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/ko/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/ru/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/zh-hans/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard1.4/zh-hant/System.ServiceProcess.ServiceController.xml",
+        "ref/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "ref/netstandard2.0/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/net461/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/netstandard1.5/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "system.serviceprocess.servicecontroller.4.5.0.nupkg.sha512",
+        "system.serviceprocess.servicecontroller.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -12763,6 +12957,45 @@
         "runtimes/aot/lib/netcore50/System.Threading.dll",
         "system.threading.4.3.0.nupkg.sha512",
         "system.threading.nuspec"
+      ]
+    },
+    "System.Threading.AccessControl/4.5.0": {
+      "sha512": "ZU4JNV9eHPw3TAdIJCDH07u9EfGFGgNJnaga8aFjcdvIIZKq4A+ZqaQNvUMFIbdCMPceYzt8JT5MdYIXAOlJ9A==",
+      "type": "package",
+      "path": "system.threading.accesscontrol/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Threading.AccessControl.dll",
+        "lib/net461/System.Threading.AccessControl.dll",
+        "lib/netstandard1.3/System.Threading.AccessControl.dll",
+        "lib/netstandard2.0/System.Threading.AccessControl.dll",
+        "ref/net46/System.Threading.AccessControl.dll",
+        "ref/net461/System.Threading.AccessControl.dll",
+        "ref/net461/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/System.Threading.AccessControl.dll",
+        "ref/netstandard1.3/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.AccessControl.xml",
+        "ref/netstandard2.0/System.Threading.AccessControl.dll",
+        "ref/netstandard2.0/System.Threading.AccessControl.xml",
+        "runtimes/win/lib/net46/System.Threading.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Threading.AccessControl.dll",
+        "runtimes/win/lib/netstandard1.3/System.Threading.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.Threading.AccessControl.dll",
+        "system.threading.accesscontrol.4.5.0.nupkg.sha512",
+        "system.threading.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Threading.Channels/4.5.0": {
@@ -13378,11 +13611,14 @@
     ".NETCoreApp,Version=v2.2": [
       "Hangfire.AspNetCore >= 1.7.5",
       "Hangfire.Console >= 1.4.2",
+      "Hangfire.Dashboard.RecurringJobExtensions >= 1.0.1",
+      "Hangfire.Heartbeat >= 0.5.0",
       "Hangfire.RecurringJobExtensions >= 1.1.6",
       "Hangfire.SqlServer >= 1.7.5",
       "Jobs.Core.Application >= 1.0.0",
       "Jobs.Entity >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
+      "Microsoft.AspNetCore.Hosting.WindowsServices >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3"
@@ -13395,11 +13631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\selfCode\\Jobs.Core\\Jobs.Core\\Jobs.Core.csproj",
+      "projectUniqueName": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core\\Jobs.Core.csproj",
       "projectName": "Jobs.Core",
-      "projectPath": "E:\\selfCode\\Jobs.Core\\Jobs.Core\\Jobs.Core.csproj",
+      "projectPath": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core\\Jobs.Core.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\selfCode\\Jobs.Core\\Jobs.Core\\obj\\",
+      "outputPath": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13418,11 +13654,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\selfCode\\Jobs.Core\\Jobs.Core.Application\\Jobs.Core.Application.csproj": {
-              "projectPath": "E:\\selfCode\\Jobs.Core\\Jobs.Core.Application\\Jobs.Core.Application.csproj"
+            "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core.Application\\Jobs.Core.Application.csproj": {
+              "projectPath": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Core.Application\\Jobs.Core.Application.csproj"
             },
-            "E:\\selfCode\\Jobs.Core\\Jobs.Entity\\Jobs.Entity.csproj": {
-              "projectPath": "E:\\selfCode\\Jobs.Core\\Jobs.Entity\\Jobs.Entity.csproj"
+            "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Entity\\Jobs.Entity.csproj": {
+              "projectPath": "E:\\selfCode\\Jobs.Core\\JobHangfire\\Jobs.Entity\\Jobs.Entity.csproj"
             }
           }
         }
@@ -13444,6 +13680,14 @@
             "target": "Package",
             "version": "[1.4.2, )"
           },
+          "Hangfire.Dashboard.RecurringJobExtensions": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
+          "Hangfire.Heartbeat": {
+            "target": "Package",
+            "version": "[0.5.0, )"
+          },
           "Hangfire.RecurringJobExtensions": {
             "target": "Package",
             "version": "[1.1.6, )"
@@ -13457,6 +13701,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.Hosting.WindowsServices": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",

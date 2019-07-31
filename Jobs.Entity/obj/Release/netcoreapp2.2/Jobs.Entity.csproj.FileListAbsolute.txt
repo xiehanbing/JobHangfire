@@ -10,3 +10,15 @@ E:\selfCode\Jobs.Core\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.Assembly
 E:\selfCode\Jobs.Core\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.csproj.CopyComplete
 E:\selfCode\Jobs.Core\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.dll
 E:\selfCode\Jobs.Core\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\bin\Release\netcoreapp2.2\Jobs.Entity.deps.json
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\bin\Release\netcoreapp2.2\Jobs.Entity.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\bin\Release\netcoreapp2.2\Jobs.Entity.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\bin\Release\netcoreapp2.2\Jobs.Core.Common.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\bin\Release\netcoreapp2.2\Jobs.Core.Common.pdb
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.csprojAssemblyReference.cache
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.csproj.CoreCompileInputs.cache
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.AssemblyInfoInputs.cache
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.AssemblyInfo.cs
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.csproj.CopyComplete
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.dll
+E:\selfCode\Jobs.Core\JobHangfire\Jobs.Entity\obj\Release\netcoreapp2.2\Jobs.Entity.pdb

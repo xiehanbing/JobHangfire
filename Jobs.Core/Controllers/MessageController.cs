@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hangfire;
+using Hangfire.Console;
 using Hangfire.RecurringJobExtensions;
+using Hangfire.Server;
 using Jobs.Core.Application;
 using Jobs.Core.Common;
 using Microsoft.AspNetCore.Http;
@@ -25,18 +27,26 @@ namespace Jobs.Core.Controllers
         /// 每天早上6点执行一次
         /// </summary>
         [RecurringJob("0 0 6 * * ?",queue:HangfireQueue.Job)]
+        [JobDisplayName("发送 每天早上6点执行一次")]
         public void Send()
         {
             _messageService.Send("hello message");
            
         }
         /// <summary>
-        /// 每两个小时执行一次
+        /// 每两个小时执行一次 （每19分钟）
         /// </summary>
-        [RecurringJob("0 0 */2 * * ?", queue: HangfireQueue.Default)]
-        public void Receive()
+        [RecurringJob("0 * */2 * * ?", queue: HangfireQueue.Default)]
+        [JobDisplayName("接收 每两个小时执行一次")]
+        public void Receive(PerformContext context)
         {
+            context.WriteLine("Receive：hello message");
             _messageService.Receive("hello message");
         }
+        //[RecurringJob("0 */2 * * * ?",queue:HangfireQueue.Apis)]
+        //public void Except(PerformContext context)
+        //{
+        //    context.WriteLine("Except213123");
+        //}
     }
 }
