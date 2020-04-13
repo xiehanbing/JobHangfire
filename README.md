@@ -15,7 +15,7 @@ Startup:
                 x.UseDashboardRecurringJobExtensions();
             });
             ApiConfig.HangfireLogUrl = Configuration["HangfireLogFileUrl"];
- ```
+```
 JobProvider:
 ```
    public class JobProvider : IConfigurationProvider
@@ -53,7 +53,7 @@ JobProvider:
         }
        
     }
-    ```
+  ```
    JobExtension:
    ```
     public static class JobExtension
@@ -175,7 +175,7 @@ JobProvider:
         }
     }
     
-    ```
+  ```
     demo:
     ```
      /// <summary>
@@ -188,5 +188,5 @@ JobProvider:
             context.WriteLine("执行取消过期入廊申请");
 
         }
-      ```
+     ```
       
