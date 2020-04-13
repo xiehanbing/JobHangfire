@@ -3,7 +3,7 @@ jobserver
 
 
 Startup:
-
+```
   //注入hangfire 服务
             services.AddHangfire(x =>
             {
@@ -15,9 +15,9 @@ Startup:
                 x.UseDashboardRecurringJobExtensions();
             });
             ApiConfig.HangfireLogUrl = Configuration["HangfireLogFileUrl"];
- 
+ ```
 JobProvider:
-
+```
    public class JobProvider : IConfigurationProvider
     {
         public IEnumerable<RecurringJobInfo> Load()
@@ -53,8 +53,9 @@ JobProvider:
         }
        
     }
-    
+    ```
    JobExtension:
+   ```
     public static class JobExtension
     {
         /// <summary>
@@ -174,8 +175,9 @@ JobProvider:
         }
     }
     
-    
+    ```
     demo:
+    ```
      /// <summary>
         /// 执行取消过期入廊申请 每1分钟执行一次
         /// </summary>
@@ -186,5 +188,5 @@ JobProvider:
             context.WriteLine("执行取消过期入廊申请");
 
         }
-      
+      ```
       
